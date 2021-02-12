@@ -1,12 +1,11 @@
 import nc from "next-connect";
-import { resolveTypeReferenceDirective } from "typescript";
 
 const handler = nc()
   .get((req, res) => {
     res.json({ message: "ok" });
   })
   .post((req, res) => {
-    resolveTypeReferenceDirective.json({ message: "posted" });
+    res.json({ message: "posted" });
   });
 
 export default handler;
